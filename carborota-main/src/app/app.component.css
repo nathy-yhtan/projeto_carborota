@@ -1,0 +1,32 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.conteudo {
+  flex: 1;
+}
+
+.rodape {
+  border-top: 1px solid var(--borda);
+  background: #f0f5f1;
+  padding: 1.5rem 0;
+}
+
+.rodape-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--texto-suave);
+}
+
+@media (min-width: 640px) {
+  .rodape-inner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
