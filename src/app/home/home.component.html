@@ -1,0 +1,41 @@
+<div class="home">
+  <section class="hero container">
+    <span class="badge">🌿 CarboRota</span>
+    <h1>Descubra a pegada de carbono do seu carro</h1>
+    <p>Calcule emissões de CO₂ com dados simples: combustível, consumo e quilometragem.</p>
+    <div class="botoes">
+      <a routerLink="/login" class="btn btn-primario">Começar agora</a>
+      <a routerLink="/lgpd" class="btn btn-secundario">Política de privacidade</a>
+    </div>
+  </section>
+
+  <!-- CARROSSEL -->
+  <section class="container carrossel">
+    <div class="slide" [style.background-image]="'url(' + slides[slideAtual].imagem + ')'">
+
+      <button type="button" (click)="slideAnterior()" class="btn-carrossel btn-prev" aria-label="Slide anterior">
+        &#10094; </button>
+
+      <div class="slide-conteudo">
+        <h3>{{ slides[slideAtual].titulo }}</h3>
+        <p>{{ slides[slideAtual].legenda }}</p>
+      </div>
+
+      <button type="button" (click)="proximoSlide()" class="btn-carrossel btn-next" aria-label="Próximo slide">
+        &#10095; </button>
+
+    </div>
+  </section>
+
+  <section class="container passos">
+    <h2>Como funciona</h2>
+    
+    <div class="container-grid">
+      <article class="passo" *ngFor="let passo of passos">
+        <span>{{ passo.icone }}</span>
+        <h3>{{ passo.titulo }}</h3>
+        <p>{{ passo.texto }}</p>
+      </article>
+    </div>
+  </section>
+</div>

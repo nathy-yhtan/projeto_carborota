@@ -1,0 +1,12 @@
+<div class="container pagina">
+  <header class="pagina-header">
+    <h1>Política de Privacidade (LGPD)</h1>
+    <p>Clique <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm" target="_blank">
+        <strong>aqui</strong></a> para saber mais.</p>
+  </header>
+
+  <section class="card topico" *ngFor="let topico of topicos">
+    <h2>{{ topico.titulo }}</h2>
+    <p>{{ topico.texto }}</p>
+  </section>
+</div>
